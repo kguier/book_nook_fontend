@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
 
-function SearchBar({ placeholder, data }) {
+function SearchBar({ setResults }) {
   const [input, setInput] = useState("");
+
   const fetchData = (value) => {
     fetch("https://www.googleapis.com/books/v1/volumes?q={SEARCH QUERY HERE}")
       .then((response) => response.json())
@@ -15,7 +16,7 @@ function SearchBar({ placeholder, data }) {
             book.volumeInfo.title.toLowerCase().includes(value)
           );
         });
-        console.log(results);
+        setResults(results);
       });
   };
 
