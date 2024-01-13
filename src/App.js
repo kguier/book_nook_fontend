@@ -43,6 +43,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="/book-details/${book.id}" element={<BookDetailsPage />} />
       </Routes>
       <Footer />
     </div>

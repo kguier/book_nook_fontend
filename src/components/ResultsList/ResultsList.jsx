@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./ResultsList.css";
 
 const ResultsList = ({ results }) => {
@@ -7,7 +8,9 @@ const ResultsList = ({ results }) => {
       {results.map((book) => {
         return (
           <div key={book.id}>
-            <p>{book.volumeInfo.title}</p>
+            <Link to={"/book-details/${book.id}"}>
+              <p>{book.volumeInfo.title}</p>
+            </Link>
           </div>
         );
       })}
