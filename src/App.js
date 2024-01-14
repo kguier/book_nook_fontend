@@ -43,7 +43,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/search" element={<SearchPage />} />
-        <Route path="/book-details/${book.id}" element={<BookDetailsPage />} />
+        <Route path="/book-details/:bookId" element={<BookDetailsPage />} />
       </Routes>
       <Footer />
     </div>
